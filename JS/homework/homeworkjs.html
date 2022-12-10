@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+</head>
+
+<body>
+    <script>
+
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        /////////////////////////////////////
+        const size = 25;
+        let result = '';
+
+        for(let y = 1; y <= size; y++) {
+            for(let x = 1; x <= size; x++) {
+                if(y === x || x === (size - y) + 1) {
+                    result += '<span style="color: red;">*</span>';
+                } else {
+                    result += '*';
+                }
+            }
+            result += '<br />';
+        }
+
+        document.write(result);
+        ////////////////////////////////////
+
+       const h=rand(1,6);
+       document.write('<h', h, '>', h, '</h', h, '>')
+
+        //////////////////////////////////////
+
+        let n1 = Math.floor(Math.random() * 20) - 10;
+        let n2 = Math.floor(Math.random() * 20) - 10;
+        let n3 = Math.floor(Math.random() * 20) - 10;
+
+        let green = `<span style="color:green;">`;
+        let red = `<span style="color:red;">`;
+        let blue = `<span style="color:blue;">`;
+
+        let results = ""
+        if (n1 < 0) {
+            results = green + n1;
+        }
+        else if (n1 > 0) {
+            results = blue + n1;
+        }
+        else results = red + n1;
+
+        if (n2 < 0)
+            results = results + green + n2;
+        else if (n2 > 0)
+            results = results + blue + n2;
+        else results = results + red + n2;
+
+        if (n3 < 0)
+            results = results + green + n3;
+        else if (n3 > 0)
+            results = results + blue + n3;
+        else results = results + red + n3;
+        document.write(results)
+        
+
+        /////////////////////////////////////
+
+        let balses = 'aeiouAEIOU';
+        let string1 = 'An American in Paris';
+        let string2 = 'Breakfast at Tiffanys';
+        let string3 = '2001: A Space Odyssey';
+        let string4 = 'Its a Wonderful Life';
+
+        i = 0;
+        while (i < balses.length-0) {
+            string1 = string1.replaceAll(balses[i], '');
+
+            i++
+        }
+        document.write(string1+ '</br>');
+
+        i = 0;
+        while (i < balses.length-0) {
+            string2 = string2.replaceAll(balses[i], '');
+
+            i++
+        }
+        document.write(string2+ '</br>');
+        i = 0;
+        while (i < balses.length-0) {
+            string3 = string3.replaceAll(balses[i], '');
+
+            i++
+        }
+        document.write(string3+ '</br>');
+        i = 0;
+        while (i < balses.length-0) {
+            string4 = string4.replaceAll(balses[i], '');
+
+            i++
+        }
+        document.write(string4+ '</br>');
+
+        ////////////////////////////////////
+
+        let i=0;
+        while(i<5)
+{
+    console.log('sukasi');
+  
+    i++
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        document.write('Moneta metama kol iškrenta herbas')
+
+        let coin = '';
+        while (coin !== 'H') {
+            let i = rand(0, 1);
+            if (i == 0)
+                coin = 'H';
+            else
+                coin = 'S';
+            document.write(coin);
+        }
+
+        document.write(`<br />`)
+
+        document.write('Moneta metama kol 3 kartus iškrenta herbas');
+
+        let x = 0;
+        while (x < 3) {
+            let i = rand(0, 1);
+            if (i == 0) {
+                coin = "H";
+                x++
+            }
+            else
+                coin = "S";
+
+            document.write(coin);
+        }
+        document.write(`<br />`)
+
+        document.write('Moneta metama kol 3 kartus iš eilės iškrenta herbas');
+
+
+        //////////////////////////////////////////////////////
+
+        document.write(`<br />`)
+
+        let masyvas = [];
+        for (let i = 0; i < 30; i++) {
+            masyvas[i] = rand(5, 25);
+            document.write(i, '|', masyvas[i], '</br>')
+        }
+
+        count = 0;
+        for (let i = 0; i < masyvas.length; i++) {
+            if (masyvas[i] > 10)
+                count++
+        }
+        document.write('masyve daugiau uz 10 yra:', count, '</br>')
+
+        count = 0;
+        for (let i = 0; i < masyvas.length; i++) {
+            if (masyvas[i] > count) {
+                count = masyvas[i];
+            }
+        }
+        document.write('didžiausias masyvo reikšmė - ', count, '<br />')
+
+    </script>
+</body>
+
+</html>
