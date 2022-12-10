@@ -120,7 +120,7 @@ for (let i = 0; i < array1.length; i++) {
 
 console.log('Reišmės, kurios yra pirmame masyve, bet nėra antrame:', array3)
 
-console.log('5 užduotis')
+console.log('6 užduotis')
 
 let array4 = [];
 

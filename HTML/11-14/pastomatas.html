@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Paštomatas</title>
+    <style>
+       
+
+        img {
+            width: 100px;
+            height: 35px
+        }
+
+        .box1 {
+            float: left;
+            background-color: white;
+            margin-right: 10px;
+            width: 250px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black
+        }
+
+        .box2 {
+            float: left;
+            background-color: white;
+            margin-right: 10px;
+            width: 250px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black
+        }
+
+        .box3 {
+            float: left;
+            background-color: white;
+            margin-right: 10px;
+            width: 250px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black
+        }
+
+        .vieta1 {
+            float: left;
+            width: 50%;
+            margin-bottom: 30px;
+            height: 30px;
+        }
+
+        .vieta2 {
+            float: right;
+            width: 50%;
+            
+        }
+        .sup{
+            font-size: smaller;
+            color: red;
+        }
+/* 
+        .duomenys1 {
+            float: left;
+            width: 50%;
+        }
+
+        .duomenys2 {
+            float: right;
+            width: 50%;
+
+        }
+
+        .duomenys3 {
+            float: left;
+            width: 50%;
+
+        } */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    
+        .duomenys1{
+            margin-bottom: 15px
+        }
+        .duomenys3{
+            margin-bottom: 15px
+        }
+    
+
+    </style>
+</head>
+
+<body style="background-color: rgb(245,245,245)">
+    <h3>Pristatymas į paštomatus</h3>
+    <form>
+        <div class="clearfix">
+            <div class="box1">
+                <label>
+                    <input type="radio" name="pasirinkimas">
+                    <p><img src="data:image/png;base64,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"
+                            alt="logotipas">
+                    </p>
+                    <p>Atsiėmimas LP EXPRESS paštomate </p>
+                    <p>2-4 darbo dienos</p>
+                    <p>1,99 €</p>
+
+                </label>
+            </div>
+            <div class="box2">
+                <label>
+                    <input type="radio" name="pasirinkimas">
+                    <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZwAAAB6CAMAAAC89RUgAAABFFBMVEX////dGTbzayLwTiPmA3bcACrcACjdFDP+9vfcDzDcACz++vvjSFzdFjT409jjS171x8zumKP86ezbAB/74uXsj5rfKUTkUWTpdIL+8vTbACTlAHDztr7siJXzZxjwRxfwoKrzZRHzZADyrrf3ztP529/gMkreHzzmYXLqfIr7y7TwRhL2rM/1wcj96OLnAHrlV2ryYj31hErzclHysLn96vThPFLpdoXnZXb1inH6xq32jVj94dL2lGT5tJT5u57+8uv5va/0eDPyi7z5zOL71+jpJIXuY6T6zcLxWS/2lX/0dCz3pHz7y8D2oIz3nHH4tKX1hU3zb030fWHxfLP2nIr3tdT0mcTrSpXsUJr5xN3vbKmleeTLAAAPQUlEQVR4nO2deXvTuBaHk7a2IznOvjlL65C9nZTQKW4uLVD2DsMMM3fmMgx8/+9x7SSWjiV5C20Sin5/8DxEtizrtXSOjpamUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUrxO9chLrr41A6n1dPzgaUTl6k8fHIck35z851YLJEV0/GCve3YadsXpWXcvhM7N0b6kczdy2OztHR4+Cbni8NC5JJDO6S9H+5LOnWjBxq37ywCzcnXpXSGmk/nZYSPp3IWerGreaTwPngrwXD19cOhdIabz/mR/X9K5C1E2Czwvn11d08TM1bOXFE0AnRcrNpLObetJd8+nw27318sPz49vbo6ff7j8tds99Kd3OTqnj/b3KR3pUd+enjB1vwTkEHJ1KExk6bw/2Zd07kJCNhFivLqbo/19SecOtA4bls5ffjiSzi1pPTZ+Or8xbFw6me290r3Rumx8dNiGI+ncjs660RjE6p55edzwbBw6oZEgqTi6Olu3WzsjY9X/COCc/L7Nt7ovOv1zrbbTvSQt41TUbqRHcCu6/rgGne7Ha5LBHyccm6NH14HP+76VMc3NPvD5XsKu7XDvOWgYPwvcgZvNvsGmlJvkbXs+3egzr5J1bd0/YWhU0Ksd3dPwmqWpSNOw2tho68k8+zU2nu7eM5+X/ELQq91PT63X1NILNeebtainH4VBNL5HO/zIzCjwvtrJ+40WfVOqjFZsHDrtDT/76ulhZOvpHvKTPY+4hnMSvgzke1Wx6bFJo9nGndGrD3vs5ICv0XT3PvDVfs01nKP/brrgm9EcETharbT5518fX+5xszdLMN29yyfXgluuOJNz8semi70R6TMKx0BbgJNy+Xx42X3woHt46Boh91/3fy8/HF+Lr+f9gXvaq2295ax0fXX87OPl2UtHZ5cfnx3DSWtWv/PO2j0NDljA5oy3XZh4es/anKOft12kO1Jpi97amuKmC47upyPt6LzsjXMutl2UmOKCN/c4Ht3DKtKQUp58Lx03D+d+OmsLlar1WnbS38aj36xzEw/nxW2Xa6ekb6fV/N36aY27fjQ429Gr1sE6dH6obm1b+ql14Cg5Hc5bO/nfHZTux9brhwcHa9HhgtJHf61VgNJg2rZ67UIl/lxJplQZ9NvtnnXeLgzY25zE/nSRNu3HyVM3K4OCm1mv3e5XSndvWeADC4NSyGKlx29bB+vR4SMEvyQuZyZXnQ01hBWMUdpu9CqRN1T6vck8PxwZCOPFbdpwXMytatTMTatOYtrJcZmWtmkiL93JrDOv08ycQgxnnUKsr6Rf8MRfrudI4sCXYA7a1YbvgUYtO7eCivjVY5OYDr+CIOmiKNOqu+MHYxVT1HBz1CgEX54ZWBfZkapi5NxjkFCkhlRt3k+ZfWtuG00FkQy9xLEoT73Sm9Rriqr4MnNvUJRsj6msfseT5aVMy82Vyg0u83OVJI5ILM7sF0kBfQ9EqjFri/B8omyS0rnh4SRy1/SerdKI4qqoGI9z4ssH1bzhcDHSAhk43chqKsQCEhHusK9esmZpxW1ZQiF17Atv6vmmspSqeC3hnMTbtBHX3ueYPFxZ5WR2bBRQQLeIynjAZgI6teR0Tjk4iYzOYNYU1g1GVUEvnOmkVTEY7/UC3nuRyEZdrFEzLLN0WsnDvkrPk48Ie59OSaElZuNtpk3eDNVX34VVDvgSvExq3Aj3lY9NMjo6PxOaYAlBe4QDimk0Z7zpmTRDKzNK5R7MrBdRUY7UOXxTAZwU/U2ZMIXN0W5LLa5+O1cjnoiGzGTEm4cHB+vT4RdKxx/pFJWQ+sFD9isCs/hrSRuBlqDXYmRWBkUQwimS2kZ5pqn3KIiml80gvKk6Uhjb9bXFwklCR7Cm8JfreLcWwxsCGjF0CgpMNhbemCveBhmIpEEETdB0SmpQZuBnDKpKCCdXJjmMGHtxQToFbehxy9CuzvUBsCvkM3qG33bxDScRnVPBmsJ4gWlLjfiM0ND/vgVan4ZT6/bsonjuOqrW2Pd+SMGj7LxjTZ2kdscGHSecJKsA0hgbQ5LZDEEvijoRQjj6kDxZ9RudTJZeThEviDmWX0Eje9aYVKvVSWNWU8AHoVowl7/5hnPQeht/FMYbnf39OFan4P/e3XEO2wawzyIDOMaoWKiAbqSQpvehei8HOu7MhNLRhjQ/CKczhZmdg8ya1GsUwgHtA/s7pArNBczNWWUHTLpebQ/AONec2pSOL5vHbwUN5+BTjNpdSTBRHcdhKw3B52JgdTivWlanPvI51qrPylI42pDJbUrnkJUqkzamOSLaZ1A4Wo0ZQBYpTlCvYjj0wZrtMzpt6khjmv9gWC/2eT80QxsgyoLffxI1nH9E1Rmgq/V2gEzAl4vUife6ZrsOvCgDQbMD4NTY7Kh55+BM6ZPKtJ+EcBgPqVSjfpZFfhXD0RXvWkPzjc3o+6F6ZGWkerQ0Q8Dus4DN1+jcgAQr2fdPfou4qQ86MMZrno7Ap14H/WsYHNq9cHBK9LMs0/oLgZOiq6CIExwEB7RLbIEs9DrNA/4eoBzwHmg7E7kDbx9H5wYkWC0dPdihw+d0mavNrHhsFwanStI4OMA0x4TTIIWLhkM9ZgRHRRXa+sr8sJ9TjuQN4fzD92pJp3Uyj/imE7VDZwDMZZFLzdB6QDP6cxicYgic+l3CqQBDCGzXFDSF0JpYSgznHQen9W/SeDk/1Dl6FNFwOrQXYkfWrkrEhBgGrYh1W86dwkmRdmlowEDSjwWLXpCVEI7AV2sl8NSW4ppOJBs6GEO2cCaDGnGFVs9uwqkqgouB2WpGbLbSM6VKziJmEcB5zbP5nHxrEGN1ItmAuBMXL1yJ2Fng6+wmnD65GHTBJnFCDCSeR1vMtVmdi3Hdro0M6qACOLwjnciN9srtC7BFs6FWVLMD+tCCVxOg6nYTDg3SgYz6QqPp3TE4n7gzhV70Bs7sQDiC8MA6K6SukrFJkVE7V5OeQMdHamI34cAgAZnQs2gOvlB4yp1Fckba2DfXBgXg/Mv3amsdvUHDBHHY0B4ZBc55NrxLaMe3o3CofcQd7ze6JQH7Zz50a6iEhqYBHM4faP0dVFuhyngdWyw2Ka9ZGPz8oSfy7dGx3Y7CKY28yib20QQOjy/n0liNmKmgcHhnba2VhanV+atx2RA4vqGBX+R7xKSydxQOdV4Mb60AHcbRxuSqVPfNengyQBcH4HDxgdaXoNqK0OLoqJhs4sAhJHYfDjUweOU201AZhv22PvfPhC7mdBRVMUZDQodWiSB4s9aKaVfOUDQuG9qtBW8ROycth9TPrsKh7URZtRPi8Pgj3r5ZaoTRyM6PL6rn036lIBiE8sOch2vDcZyCuGzIqNpIB8adSAwBE3dnV+HQIIG2sjDU5MB4G4hKpQ2crRYqpjeQEEUIeDgJg54+vYi9soM4M/g86BLi0GEywt5ZOCRIYBgLB6dCXAQFvh8drjpD06KvQ48H5+E3wImvovc2vi8LirwfaFw7C4d2Ssu5auLMGGnojdJAjy/S40oE581tdmsJRGK2/tIDkdlI4DPsLBzgOS8mmUmX7Jtn0+nghwuMCOHw3tprcWXdrujQAIv3V5o1/+sutLNwaJBAG7q1Th6IYVlMOq/ElVEER+BKJ45JryU6NEDCXXx0khcsatldOHTBgLtSl3x6/pejwVB+O7YIToYfhL4S1ZVbtuiwToKTE+hAALHLK1ydAww0eXfh0FUHbiitQNqRbz4EwmGjVsL5nM9s4LP1jq+qRc51dtEcpzYOsu6C7MByE34gOqWrDRUwwt5dOCBYOAfujn+1VGI4/ESo2F0z8wrSwo9GKKqaGp8OnSnkV3YWy3S8DINvOwzH8h5vpAEpxTfPBuBwoWohHH4JgdDomG5MSFNDNuBXxu76zfh0TLCOTlMmoHoKeTCOVmFoaofh0CBBM5ciJsefMRiDYnY3jxDOJ86XFvVrXrxOGQY0nkxxtZwpPh1qQxc7a+btipnJlHJWHi5WRjbs8nYYDl0JpfYGxJFmjsih2RoaM4IQryHgg2v8SMesEwun1Nu8Y2BaNtkuEJ/OBQw0GQgbNdseIbhs2PnV1y/sMJxUhwyrZyQOqjAjTdiV1/2GVghH5zwCfkanVAcfOcJD/3bJ0vSiBpfyq3EPwDRhti4JQ2O3PjHj6F2GQ4MEJPxvpJnLcmCWDdvgK9crReHSKME8NdN0Skwlaoo2HHesdiE3bVuTWQ1j//SR2ohJp2KjdKhYG7fLcMA+Nk8oy3Qy+hh+5chuFHtTpw6rjTxY46qB2bkvHBvG6rBs0qvNLHi5vUSwozI2nZzNZQ2f0mQ3ce4yHLCSgBSEW7BWwLBr0LAnOG8No42mYJMBnA0VsImU2oi5DqFSD96GpylVlvFOw2lzr4L5BWudJnsRX3nQyxZtz3lLOrZ12CSgY06UgK5NqfGTCTsNByyOXmXLbu90i9KI2tWKs9Cgv+bZHLQ+r0aipfw6bBLQSbVtwYoHx3ebC6LVOw1HHzOfmTBeondwiKE1kJr1xWH0f0UbdJZmx1yTTRI6rh/u3xWpYTQTrpgqlNFKmF/ITtKaHJy84qVBOOQGNOLgNMkNAE6WZKOKTkmwaIbLcrBRgNVLzJAi2pDvHkyhZYtMUT6J4HxdPW9NNmmjHP/IOLM3rimqu/LRXe+ganbQcXOledaTxaZV6l5SnQPbI7fNaZ+hT8iv3OkRBZJZPifKRvjlmRdZnyYBa1f0wsROL04gcd948dJIUZWRPS/2uVtMfvtU693yqsxMuJInBhvemoeqNC3O67ZtZ2cXPb6EVBlPgnf2kgQPFt+WOLOQG/zpYRe5MnPt4sW4nrVdZeuzRqc35Y5WWopbL9165+WsN5QIAyaUhvg9N9ESV+w9lh5J0akUJkpA2TgqBh0NEyI0+k6O9v0e9CWYjeNO1RI6BQbjcUh9m+BYp/WO6Vsq87BDUPhmo3TkX6G8TYFjozg2jnq1qLM2QLOxt3Ky733Wl1YIG/eYMIzj4NFUw9p00X8ArU71ClpBkKpc4Ki9C2mtORIdkib1rVrGCQLZpNzTyEPPjtOUpm1t+M80/jAyHbMTxsaRPp2ny6JtWQZSm7XtnCL/g+jxwwg2rsxpJ4+bi+NDV6EHrDab6VlVcNiO1C3qzatY43PdXJz0aw9d2fVG9Twne7Mdk77UtoshJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSV1j/V/eXKp5VOrCjwAAAAASUVORK5CYII="
+                            alt="logotipas"> </p>
+                    <p>Atsiėmimas Omniva paštomate</p>
+                    <p>2-4 darbo dienos</p>
+                    <p>1,99 €</p>
+
+                </label>
+            </div>
+            <div class="box3">
+                <label>
+                    <input type="radio" name="pasirinkimas">
+                    <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/DPD_logo_%282015%29.svg/2560px-DPD_logo_%282015%29.svg.png"
+                            ; alt="logotipas">
+                    </p>
+                    <p> Atsiėmimas paštomate </p>
+                    <p>2-4 darbo dienos</p>
+                    <p>1,99 €</p>
+                </label>
+            </div>
+        </div>
+        <h3>Pasirinkite pristatymo vietą</h3>
+        <div class="vieta1">
+            <label for="miestas">Miestas<span class="sup"> * </span></label>
+            <br>
+            <select style="height: 30px; width:300px">
+                <option value="1">Garliava</option>
+                <option value="2">Vilnius</option>
+                <option value="3">Kaunas</option>
+            </select>
+        </div>
+        <div class="vieta1">
+            <label for="adresas">Paštomato adresas (paštomatas)<span class="sup"> * </span></label>
+            <br>
+            <select style="height: 30px; width:300px">
+                <option value="1">IKI Garliava (Vytauto g. 67)</option>
+                <option value="2">IKI Vilnius (Žirmūnų g. 2)</option>
+                <option value="3"> IKI Kaunas (A. Juozapavičiaus pr. 125) </option>
+            </select>
+        </div>
+        <h3>Pateikite gavėjo duomenis</h3>
+        <div class="vieta1">
+            <div class="duomenys1">
+                <label>Vardas <span class="sup"> * </span></label>
+                <br>
+                <input type="text" placeholder="Vardenis" required; style="height: 30px; width: 300px">
+            </div>
+            <div class="duomenys3">
+                <label>Mobilaus telefono numeris<span class="sup"> * </span></label>
+                <br>
+                <input type="tel" placeholder="+37060012345" required; style="height: 30px; width:300px">
+            </div>
+        </div>
+        <div class="vieta1">
+            <div class="duomenys2">
+                <label>Pavardė<span class="sup"> * </span></label>
+                <br>
+                <input type="text" placeholder="Pavardenis" required; style="height: 30px; width: 300px">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
