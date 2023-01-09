@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+
+        let grauztukai = new Map();
+        class Vaisius {
+            constructor(dydis = rand(5, 25), id = rand(1000000, 9999999), prakastas = false) {
+                this.dydis = dydis;
+                this.id = id;
+                this.prakastas = prakastas;
+            }
+            prakasti() {
+                this.prakastas = true;
+                return this;
+            }
+        }
+        const fruit = new Vaisius();
+
+        console.log(fruit.prakasti());
+
+
+        class Krepsys {
+            static vaisiai = [];
+
+            static pripildyti() {
+                let x = Krepsys.vaisiai.length;
+                for (let i = x; i < 20; i++) {
+                    this.vaisiai[i] = new Vaisius;
+                }
+
+                Krepsys.vaisiai.sort((a, b) => {
+                    a = a.dydis;
+                    b = b.dydis;
+
+                    if (a < b)
+                        return 1;
+
+                    if (a > b)
+                        return -1;
+
+                    return 0;
+                });
+                return Krepsys.vaisiai;
+            }
+            static isimti(){
+                let j = this.vaisiai.shift();
+                
+            }
+        }
+
+        Krepsys.pripildyti();
+        console.log(Krepsys.vaisiai)
+        Krepsys.isimti();
+        console.log(Krepsys.vaisiai)
+        Krepsys.pripildyti();
+        console.log(Krepsys.vaisiai)
+
+
+        
+
+    
+    </script>
+    
+</body>
+
+</html>

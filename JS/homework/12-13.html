@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        console.log('1 užduotis')
+
+        function greeting(name1) {
+            console.log('Labas ' + name1);
+        }
+
+        greeting('Elena');
+
+        document.write('2 užduotis', '</br>')
+
+        function getText(text) {
+            const count = text.length
+            document.write('Tekste yra ', count, ' simbolių')
+        }
+        getText('Hello, hello, hello!')
+
+        console.log('3 užduotis')
+
+        function nameLastName(name1, last_name1) {
+            const name = name1.charAt(0).toUpperCase() + name1.slice(1)
+            const last_name = last_name1.charAt(0).toUpperCase() + last_name1.slice(1);
+            const me = name + ' ' + last_name;
+            console.log(me)
+        }
+        nameLastName('nora', 'zabulyte')
+
+        console.log('4 užduotis')
+
+        function randomNumbers(){
+
+        const number1 = rand(0, 5);
+        const number2 = rand(0, 5);
+        const number3 = rand(0, 5);
+        const numbers = number1 + ',' + number2 + ',' + number3
+
+        console.log(numbers)
+        }
+    
+        randomNumbers()
+
+    </script>
+</body>
+
+</html>

@@ -74,6 +74,63 @@
         }
         document.write('didžiausias masyvo reikšmė - ', count, '<br />')
 
+        //////////////////////////////////////////////////////
+
+        // let kazys = 0;
+        // let petras = 0;
+
+
+        // while (true) {
+        //     let kazystaskai = rand(5, 25);
+        //     let petrastaskai = rand(10, 20);
+        //     let laimetojas='';
+
+        //     kazys += kazystaskai;
+        //     petras += petrastaskai;
+
+        //     if(kazystaskai>petrastaskai){
+        //         laimejotas='Kazys'
+        //     }
+        //     else{
+        //         laimetojas='Petras'
+        //     }
+
+        //     console.log('Kazys:', kazystaskai,'Petras:', petrastaskai,  'Partija laimejo:', laimetojas)
+
+        //     if(kazys>=222 || petras>=222){
+        //         break;
+        //     }
+
+        // }
+        //////////////////////////////////////////////////////
+        let counter = 0;
+
+        for (let i = 0; i < 5; i++) {
+            let limit= 85;
+
+            while (limit > 0) {
+                limit -= rand(5, 20);
+                counter++;
+            }
+        }
+        console.log('Ikalti penkis vinis prireike '+counter+' smugiu');
+
+        counter = 0;
+
+        for (let i = 0; i < 5; i++) {
+            let limit= 85;
+
+            while (limit > 0) {
+                if(rand(0,1===1)){
+                    console.log('I vini nepataikeme');
+                    continue;
+                }
+                limit -= rand(5, 30);
+                counter++;
+            } 
+        }
+
+
     </script>
 </body>
 

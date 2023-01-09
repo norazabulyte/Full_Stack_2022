@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        console.log('1.1 užduotis')
+        const masyvas = [rand(5, 25), rand(5, 25)];
+        for (let i = 2; i < 10; i++) {
+            const res = masyvas[i - 2] + masyvas[i - 1];
+            masyvas.push();
+        }
+
+        console.log(masyvas)
+        
+        // let number1 = rand(5, 25);
+        // let number2 = rand(5, 25);
+        // let number3 = number1 + number2
+        // let number4 = number2 + number3
+        // let number5 = number3 + number4
+        // let number6 = number4 + number5
+        // let number7 = number5 + number6
+        // let number8 = number6 + number7
+        // let number9 = number7 + number8
+        // let number10 = number8 + number9
+
+
+        // let array = [number1, number2, number3, number4, number5, number6, number7, number8, number9, number10]
+
+        // console.log(array)
+
+
+
+
+        console.log('1.2 užduotis')
+
+
+
+        let arrayy = [];
+
+
+        for (let i = 0; i < 10; i++) {
+            arrayy[arrayy.length] = rand(2, 20);
+
+        }
+        console.log(arrayy)
+
+
+        console.log('1 užduotis')
+
+        function pakeltiLaipsniu(number, laipsnis) {
+            console.log(number ** laipsnis)
+        }
+        pakeltiLaipsniu(34, 3)
+
+        document.write('2 užduotis')
+
+        function heading(text) {
+            document.write('<h1>', text, '</h1>')
+        }
+        heading('Rezultatą atvaizduokite naršyklėje.')
+
+
+        document.write('3 užduotis')
+
+        function headingas(text, tagnumber) {
+            document.write('<h', tagnumber, '>', text, '</h', tagnumber, '>')
+        }
+
+        headingas('Rezultatą atvaizduokite naršyklėje.', 3)
+
+        console.log('4 užduotis')
+        //NEVEIKA
+        function isPrime(num) {
+            if (num <= 1) return 'Pirminis skaicius:', num;
+            if (num === 2) return 'Nera pirminis skaicius:', num;
+            let num2 = Math.sqrt(num);
+            for (let i = 2; i <= num2; i++) {
+                if (num2 % i === 0) {
+
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        isPrime(3)
+
+
+
+        console.log('6 užduotis')
+
+        function generateArray() {
+            let array1 = [];
+
+            for (let i = 0; i < 100; i++) {
+                array1[array1.length] = rand(997, 15991)
+            }
+            return array1
+        }
+        const array1 = generateArray();
+        console.log(array1)
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.container {
+    margin: auto;
+    margin-top: 20px;
+}
+
+.col-md-,
+.col-lg-4 {
+    margin-bottom: 20px;
+}

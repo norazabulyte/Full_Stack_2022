@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        console.log('1 uzduotis')
+
+        const masyvas = [];
+        let count = 0;
+
+
+        for (let i = 0; i < 10; i++) {
+            masyvas[i] = [];
+
+            for (let x = 0; x < 5; x++) {
+                const digit = rand(5, 25);
+
+                masyvas[i][x] = digit;
+                if (digit > 10)
+                    count++;
+                var maxRow = masyvas.map(function (row) { return Math.max.apply(Math, row); });
+                var max = Math.max.apply(null, maxRow);
+
+            }
+        }
+
+        console.log(masyvas);
+
+        console.log(count);
+        console.log(max);
+
+
+        console.log('3 uzduotis')
+
+        let array = [];
+
+        for (let i = 0; i < 10; i++) {
+            array[i] = [];
+            let number = rand(0, 5);
+        }
+        for (let x = 0; x < array; x++) {
+
+        }
+
+
+
+        console.log(array)
+
+
+    </script>
+
+</body>
+
+</html>
