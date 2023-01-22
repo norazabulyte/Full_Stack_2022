@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="greeting"></p>
+    <br>
+    <h1>People entered:</h1>
+    <h2 id="count-el">0</h2>
+    <button id="increment-btn" onclick="increment()">increment</button>
+    <button id="save-btn" onclick="save()">save</button>
+    <p id="save-el">Previous entries:</p>
+    <br>
+
+    <span id="num1"></span>
+    <span id="num2"></span>
+    <br>
+    <button onclick="add()">Add</button>
+    <button onclick="subtract()">Subtract</button>
+    <button onclick="divide()">Divide</button>
+    <button onclick="multiply()">Multiply</button>
+    <br>
+    <span id="answer">Answer: </span>
+
+    <br>
+    <h1>BlackJack</h1>
+    <p id="message-el">Want to play a round?</p>
+    <p id="cards">Cards:</p>
+    <p id="sum">Sum:</p>
+    <button onclick="start()">START GAME</button>
+    <button onclick="newCard()">NEW CARD</button>
+    <p id="player-el"></p>
+
+    <script>
+
+        let count = 0;
+        let countEl = document.getElementById("count-el");
+        let saveEl = document.getElementById("save-el");
+
+        console.log(saveEl)
+
+        function increment() {
+            count = count + 1
+            countEl.innerText = count
+            console.log(count)
+        }
+
+        function save() {
+            console.log(count)
+            let all = count + ' - '
+            saveEl.textContent += all
+            countEl.innerText = 0
+            count = 0
+        }
+
+    </script>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        let name = 'Nora';
+        let greeting = 'Hi there';
+
+        function greet() {
+            console.log(greeting + ', ' + name + '!')
+        }
+        greet()
+
+        ////
+        let myPoints = 3;
+        function add3Points() {
+            myPoints += 3;
+            console.log(myPoints)
+        }
+
+        function remove1Point() {
+            myPoints -= 1;
+            console.log(myPoints)
+        }
+        add3Points();
+        add3Points();
+        add3Points();
+        remove1Point();
+        remove1Point();
+
+        ///
+
+        let number1 = rand(0, 200);
+        let number2 = rand(0, 200);
+
+        document.getElementById('num1').textContent = number1
+        document.getElementById('num2').textContent = number2
+        let answer = document.getElementById('answer')
+
+
+        function add() {
+            sum = number1 + number2
+            answer.textContent = 'Answer:' + sum
+        }
+
+        function subtract() {
+            sum = number1 - number2
+            answer.textContent = 'Answer:' + sum
+        }
+
+        function divide() {
+            sum = number1 / number2
+            answer.textContent = 'Answer:' + sum
+        }
+
+        function multiply() {
+            sum = number1 * number2
+            answer.textContent = 'Answer:' + sum
+        }
+
+    </script>
+    <script>
+
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+       
+        let firstCard = random();
+        let secondCard = random();
+        let array = [firstCard, secondCard];
+        let sum = firstCard + secondCard;
+        let hasBlackJack = false;
+        let isAlive = true;
+        let message = '';
+        let messageEl = document.getElementById('message-el');
+        let sumCards = document.querySelector('#sum');
+        let cards = document.getElementById('cards');
+
+        let player={
+        name:'Eldas',
+        chips:145
+        }
+
+        let playerEl=document.getElementById('player-el');
+        playerEl.textContent=player.name+': $'+player.chips
+
+        function random() {
+            let randomNumber= Math.floor(Math.random() * 13) + 1
+            if (randomNumber > 10) {
+                return 10
+            } else if (randomNumber === 1) {
+                return 11
+            } else {
+                return randomNumber
+            }
+        }
+        function start() {
+            cards.textContent = 'Cards:'
+            for (let i = 0; i < array.length; i++) {
+                cards.textContent += array[i] + ', ';
+            }
+            sumCards.textContent = 'Sum:' + sum;
+
+            if (sum <= 20) {
+                message = 'Do you want to draw a new card?'
+            }
+            else if (sum === 21) {
+                message = 'You have got a Blackjack!'
+                hasBlackJack = true
+            }
+            else {
+                message = 'You are out of the game!'
+                isAlive = false;
+            }
+            messageEl.textContent = message;
+
+        }
+
+
+        function newCard() {
+            if (isAlive === true && hasBlackJack === false) {
+                let thirdCard = random();;
+                sum += thirdCard;
+                array.push(thirdCard)
+                start()
+            }
+        }
+
+        ////
+        let age = rand(1, 100)
+
+        if (age <= 20) {
+            console.log('You can not enter the club')
+        } else {
+            console.log('Welcome')
+        }
+
+        /////
+
+        let age1 = rand(80, 120);
+
+        if (age1 < 100) {
+            console.log('Not elegible')
+        } else if (age1 === 100) {
+            console.log('congrats')
+        } else {
+            console.log('Not eligible, you have already gotten one')
+        }
+
+    </script>
+    <script>
+
+        let sentence = ['hello', 'my', 'name is', 'nora'];
+        let greetingel = document.getElementById('greeting');
+
+        for (let i = 0; i < sentence.length; i++) {
+            greetingel.textContent += sentence[i] + ' '
+        }
+        
+    </script>
+</body>
+
+</html>

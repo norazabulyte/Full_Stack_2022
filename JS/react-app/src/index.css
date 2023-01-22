@@ -1,0 +1,50 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+}
+
+body {
+  background-color: rgb(37, 125, 183);
+  font-size: 18px;
+  font-family: 'Montserrat';
+  color: rgb(212, 212, 212);
+}
+.section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+.container {
+  padding: 30px;
+  background-color: #454744;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+}
+.password input{
+  height:30px;
+  background-color:rgb(198, 163, 219);
+}
+.generate-btn{
+  height:30px;
+  text-align: center;
+  background-color: rgb(143, 62, 193);
+  color:white;
+  border:1px solid rgb(152, 28, 123);
+  width: 120px;
+}
+
+.delete-btn{
+  height:30px;
+  width: 120px;
+  text-align: center;
+  background-color: rgb(143, 62, 193);
+  color:white;
+  border:1px solid rgb(152, 28, 123);
+}
